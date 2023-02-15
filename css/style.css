@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-attachment: fixed;
+}
+
+.header {
+    background: #f25757;
+    background: linear-gradient(212deg, rgba(242, 87, 87, 1) 0%, #f2db63 26%, #f22e76 90%, #f2b366 100%);
+    width: 100vw;
+    height: 40vh;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.header>img {
+    width: 20%;
+    height: 180px;
+    margin-top: 3%;
+}
+
+.ola {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.form {
+    width: 40%;
+    height: auto;
+    margin: 5% auto;
+    border-radius: 10px;
+    border: 4px solid #f25757;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.form>input,
+label,
+button,
+select {
+    display: inline-block;
+    width: 80%;
+    margin: 3% 0;
+    font-size: 20px;
+}
+
+.form>input,
+select {
+    padding: 10px 2px;
+    border: none;
+    border-bottom: 1px solid #f22e76;
+    outline: none;
+}
+
+.form>label {
+    text-align: left;
+    padding: 5px;
+}
+
+.btn {
+    background: #f22e76;
+    background: linear-gradient(top, #f22e76, #f25757);
+    background: linear-gradient(to bottom, #f22e76, #f25757);
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #f2b366;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #f2db63;
+    background: linear-gradient(top, #f2db63, #f2b366);
+    background: linear-gradient(to bottom, #f2db63, #f2b366);
+}
+
+/*pintar*/
+.card {
+    width: 60%;
+    margin: 5% auto;
+    border: 2px solid #f22e76;
+    text-align: center;
+}
+
+.card .title-card {
+    padding: 2%;
+}
+
+.card .text-promedio {
+    font-size: 20px;
+    color: #f25757;
+}
+
+.text-aprobado {
+    font-size: 24px;
+    padding: 2% 0;
+}
+
+.card .text-profesion {
+    font-size: 20px;
+    color: #f25757;
+}
+
+.card .btnRegistrar {
+    background: #f2db63;
+    background: linear-gradient(top, #f2db63, #f2b366);
+    background: linear-gradient(to bottom, #f2db63, #f2b366);
+    border-radius: 24px;
+    padding: 2%;
+    border: 1px solid #f2b366;
+}
+
+.alerta {
+
+    width: 25%;
+    height: 100px;
+    background-color: #f25757;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7%;
+    border: 1px solid #f2b366;
+}
+
+.textAlerta {
+    width: 100%;
+    margin-top: 10px;
+    color: aliceblue;
+}
+
+.close {
+    width: 9%;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.labelProfesion {
+    display: none;
+}
+
+#profesion {
+    display: none;
+}
+
+.labelPromedio {
+    display: none;
+}
+
+#promedio {
+    display: none;
+
+}
+
+@media screen and (max-width: 760px) {
+    .form {
+        width: 60%;
+        margin: 2% auto;
+        border: 2px solid #f2b366;
+        padding: 15px 5px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .form {
+        width: 70%;
+        margin: 1% auto 2% auto;
+        border: 2px solid #66c3f2;
+        padding: 15px 5px;
+    }
+
+    .form>input,
+    label,
+    button,
+    select {
+        margin: 2% 0;
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
