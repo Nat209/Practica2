@@ -70,7 +70,7 @@ const modalAlert = (cad) => {
     const alerta = document.createElement('div');
     const texto = document.createElement('p');
     const img = document.createElement('img');
-    img.src = "./assets/img/cruz.png";
+    img.src = "./assets/img/xmark-solid.svg";
     img.className = "close";
     texto.setAttribute("class", "textAlerta");
     alerta.setAttribute("class", "alerta");
