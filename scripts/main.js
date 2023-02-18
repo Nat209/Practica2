@@ -3,32 +3,13 @@ import { addStudent, paintCard, modalAlert, addProfe } from './paint.js';
 
 const btnAgregar = document.getElementById('btnAgregar');
 const btnMostrar = document.getElementById('btnMostrar');
+const btnBorrar = document.getElementById('btnBorrar');
 const select = document.getElementById('opcion');
-
 
 const labelProfesion = document.querySelector('.labelProfesion');
 const profesion = document.getElementById('profesion');
 const labelPromedio = document.querySelector('.labelPromedio');
 const promedio = document.getElementById('promedio');
-
-const op = document.getElementById('opcion').value;
-
-select.onchange = () => {
-    let opcion = select.value;
-
-    if (opcion === "estudiante") {
-        promedio.style.display = 'inline-block';
-        labelPromedio.style.display = 'inline-block';
-        profesion.style.display = 'none';
-        labelProfesion.style.display = 'none';
-    }
-    if (opcion === "profesor") {
-        profesion.style.display = 'inline-block';
-        labelProfesion.style.display = 'inline-block'
-        promedio.style.display = 'none';
-        labelPromedio.style.display = 'none';
-    }
-}
 
 /* Generar eventos
 1. Colocando el metodo(evento) en el atrivuto onClick, onmouseover, onmouseour...
@@ -68,19 +49,49 @@ btnAgregar.onclick = function () {
 
         }
     }
-    // resetear formulario
+
+
+}
+// resetear formulario
+btnBorrar.addEventListener('click', function () {
     form.reset()
     profesion.style.display = 'none';
     labelProfesion.style.display = 'none';
     promedio.style.display = 'none';
     labelPromedio.style.display = 'none';
+})
+
+// Ocultar campos segun rol
+
+const seleccionar = select.onchange = () => {
+
+    const opcion = select.value;
+
+    if (opcion === "estudiante") {
+        promedio.style.display = 'inline-block';
+        labelPromedio.style.display = 'inline-block';
+        profesion.style.display = 'none';
+        labelProfesion.style.display = 'none';
+    }
+    if (opcion === "profesor") {
+        profesion.style.display = 'inline-block';
+        labelProfesion.style.display = 'inline-block'
+        promedio.style.display = 'none';
+        labelPromedio.style.display = 'none';
+    }
+    return opcion;
+
 }
+// Mostrar datos
 
 btnMostrar.addEventListener("click", function () {
-    if (op === "estudiante") {
-        paintCard("ESTUDIANTE");
+    let car = seleccionar();
+
+
+    if (car === "estudiante") {
+        paintCard("ESTUDIANTE")
+
     } else {
-        paintCard("PROFESOR");
+        paintCard("PROFESOR")
     }
-    
-});
+})

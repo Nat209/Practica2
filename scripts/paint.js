@@ -10,7 +10,7 @@ const profes = [];
 
 const paintCard = (typ) => {
     typ = typ.toUpperCase();
-    console.log(typ);
+    //console.log(typ);
     const fragment = document.createDocumentFragment();
     const templateStudent = document.querySelector('#templateEstudiante').content;
     const templateProfesor = document.querySelector('#templateProfesor').content;
@@ -27,15 +27,14 @@ const paintCard = (typ) => {
             fragment.appendChild(cloneTemp);
             
         }
-    }
-    if (typ === "PROFESOR") {
-        for (let j of profes) {
-            const cloneTempp = templateProfesor.cloneNode(true);
-            cloneTempp.querySelector(".title-card").innerHTML = "Datos del  <i>Profesor</i>";
-            cloneTempp.querySelector('.data-card').innerHTML = `Nombre: ${j.nom.toUpperCase()} Apellidos: ${j.ap.toUpperCase()}`;
-            cloneTempp.querySelector('.text-profesion').innerHTML = `Profesión es: ${j.pro.toUpperCase()}`;
+    }else if (typ === "PROFESOR") {
+        for (let i of profes) {
+            const cloneTemp = templateProfesor.cloneNode(true);
 
-            fragment.appendChild(cloneTempp);
+            cloneTemp.querySelector(".title-card").innerHTML = "Datos del  <i>Profesor</i>";
+            cloneTemp.querySelector('.data-card').innerHTML = `Nombre: ${i.nom.toUpperCase()} Apellidos: ${i.ap.toUpperCase()}`;
+            cloneTemp.querySelector('.text-profesion').innerHTML = `Profesión es: ${i.pro.toUpperCase()}`;
+            fragment.appendChild(cloneTemp);
             
 
         }
@@ -66,7 +65,7 @@ const addProfe = (name, lastName, profesion) => {
     profes.push(profe);
     //console.log(profes);
     modalAlert('Se agrego Profesor')
-};
+}
 const modalAlert = (cad) => {
     const alerta = document.createElement('div');
     const texto = document.createElement('p');

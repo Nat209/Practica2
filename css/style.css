@@ -84,6 +84,18 @@ select {
     background: linear-gradient(to bottom, #f2db63, #f2b366);
 }
 
+.btnBorrar {
+    background: #564d50;
+    background: linear-gradient(top, #474345, #4a2424);
+    background: linear-gradient(to bottom, #474345, #4a2424);
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #f2b366;
+    cursor: pointer;
+}
+
 /*pintar*/
 .card {
     width: 60%;
@@ -150,11 +162,13 @@ select {
 }
 
 .labelProfesion {
+
     display: none;
 }
 
 #profesion {
     display: none;
+  
 }
 
 .labelPromedio {
@@ -163,6 +177,7 @@ select {
 
 #promedio {
     display: none;
+    
 
 }
 

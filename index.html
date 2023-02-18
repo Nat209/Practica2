@@ -42,8 +42,9 @@
         type="text"                    
         required
         />
+        <label for="opcion">Rol:</label>
         <select class="control-s" name="opcion" id="opcion">
-            <option value="0" selected>Seleccione una opción</option>
+            <option value="0" >Seleccione una opción</option>
             <option value="estudiante">Estudiante</option>
             <option value="profesor">Profesor</option>
             <option value="administrativo">Administrativo</option>
@@ -71,6 +72,8 @@
         
         <button type="button" class="btn" id="btnAgregar">Agregar</button>
         <button type="button" class="btn" id="btnMostrar" >Mostrar</button>
+        <button type="button" class="btnBorrar" id="btnBorrar">Borar Formulario</button>
+        
     </form>
     <section class="allCards">
         <div class="cardsEstudiantes" id="cardsEstudiantes"></div>
@@ -87,11 +90,12 @@
             </div>       
     </template>
     <template id="templateProfesor">      
-            <div class="card-body">
-                <h3>nombre</h3>
-                <h6></h6>
-                <p class="lead">Edad</p>
-            </div>       
+        <div class="card">
+            <h3 class="title-card"></h3>
+            <h4 class="data-card"></h4>             
+            <p class="text-profesion"></p>
+            <button class="btnRegistrar">Registrar</button>                
+        </div>       
     </template>
 
     <script type="module" src="./scripts/main.js"></script>
